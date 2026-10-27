@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rogerzime-blindspot"
+version = "0.1.0"
+description = "把系统能力清单与现有监控项对照，标出无覆盖的环节"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "rogerzime" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://rogerzime.github.io"
+Repository = "https://github.com/rogerzime/blindspot"
+Issues = "https://github.com/rogerzime/blindspot/issues"
+
+[project.scripts]
+blindspot = "blindspot:main"
+
+[tool.setuptools]
+py-modules = ["blindspot"]
